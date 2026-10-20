@@ -1,0 +1,412 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+button {
+    border-radius: 6px;
+    border: 0 solid black;
+    padding: 5px;
+    color: #f5f5f5;
+    background-color: #ae946d;
+    cursor: pointer;
+}
+
+.small-photo {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+/*_______________HomePage_______________*/
+.home-page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.home-page > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    object-fit: cover;
+}
+
+.home-page-welcome {
+    position: relative;
+    margin: auto;
+    color: #f5f5f5;
+    text-shadow: 3px 3px 5px black;
+    font-size: 2em;
+}
+
+.home-page-welcome > p {
+    margin: 0px;
+}
+
+.home-page-welcome > a {
+    position: relative;
+    text-decoration: none;
+    color: #f5f5f5;
+    left: 25%;
+}
+
+.home-page-welcome > a:hover {
+    text-shadow: none;
+    color: #ae946d;
+}
+
+/*_______________ProfilePicture_______________*/
+.nav-user-pf {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-user-pf img {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.nav-user-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 0px;
+    color: #f5f5f5;
+}
+
+.user-name {
+    font-size: 0.9em;
+}
+
+.user-role {
+    font-size: 0.7em;
+}
+
+
+/*_______________NAVBAR_______________*/
+.navbar {
+    display:flex;
+    flex-direction: row;
+    background-color: black;
+}
+
+.navbar #logo {
+    padding: 20px 10px 20px 20px;
+}
+
+.navbar a {
+    font-size: 1.5em; /* 24px */
+    color: #f5f5f5;
+    text-decoration: none;
+    padding: 20px 0px 20px 0;
+}
+
+.navbar {
+    display:flex;
+    flex-direction: row;
+    background-color: black;
+
+}
+
+.navbar-left {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-right {
+    display: flex;
+    margin-left: auto;
+    gap: 30px;
+}
+
+.navbar .links:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #ae946d;
+}
+
+
+/*_______________LowerNavbar_______________*/
+.navbar-lower {
+    display:flex;
+    flex-direction: row;
+    background-color: #f8f1e4;
+}
+
+.navbar-lower .gap {
+    padding-right: 25px;
+}
+
+.navbar-lower a {
+    font-size: 1em; /* 24px */
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+}
+
+.navbar-lower .vertical-line {
+    border-right: 1px solid black;
+    height: 10px;
+    margin: 10px;
+}
+
+.navbar-lower-right {
+    display: flex;
+    margin-left: auto;
+}
+
+
+/*_______________Main_______________*/
+main {
+    flex: 1;
+    background-color: #f5f5f5;
+}
+
+
+/*______________MemberIndex & ProductIndex_______________*/
+.member-index, 
+.product-index, 
+.order {
+    border-collapse: collapse;
+    margin: 30px;
+    width: 55%;
+}
+
+.member-index th, .member-index td, 
+.product-index th, .product-index td, 
+.order th, .order td {
+    border-bottom: 1px solid black;
+    padding: 5px 15px;
+    text-align: left;
+}
+
+.member-index th, 
+.product-index th,
+.order th {
+    background-color: #f4e3bb;
+}
+
+.member-index tr:nth-child(even), 
+.product-index tr:nth-child(even), 
+.order tr:nth-child(even) {
+    background-color: #f4f1ea;
+} 
+
+.member-index tr td.detail-button, 
+.product-index tr td.action-button,
+.order tr td.action-button {
+    background-color: #f5f5f5; /* makes the button part of td transparent */
+} 
+
+.member-index .detail-button,
+.product-index .action-button,
+.order .action-button {
+    background: transparent;
+    border: 0px;
+}
+
+.member-search, .member-count, 
+.product-search, .product-count, .product-insert,
+.order-count {
+    margin: 20px 30px;
+}
+
+
+/*______________MemberDetail_______________*/
+.member-detail {
+    border-collapse: collapse;
+    margin: 30px;
+}
+
+.member-detail th, .member-detail td,
+.product-detail th, .product-detail td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+.member-detail th, .product-detail th {
+    background-color: #f4e3bb;
+    vertical-align: top;
+}
+
+.member-detail #back-button {
+    border: 0px;
+    padding: 10px;
+}
+
+
+/*______________ProductDetail_______________*/
+.product-detail {
+    border-collapse: collapse;
+    width: 200px;
+    margin: 0px 30px;
+}
+
+.product-detail-back {
+    margin: 10px 30px;
+}
+
+
+/*______________Photo_______________*/
+.upload img {
+    display: block;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.upload.dragover img{
+    opacity: 0.5;
+}
+
+
+/*______________PhotoSlider_______________*/
+.product-detail-photo{
+    max-width: 200px;
+    margin: 10px 30px;
+}
+
+.slides {
+    display: none;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.slides.active {
+    display: block;
+}
+
+.slider-button {
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+.slider-button .prev, .slider-button .next {
+    width: 25%;
+    padding: 3px 5px;
+}
+
+.slider-button .prev {
+    margin-left: 45px;
+}
+
+/*______________RegistrationForm_______________*/
+.registration-form {
+    display: grid;
+    margin: 20px;
+    grid: auto / auto auto auto;
+    gap: 5px;
+    place-content: start;
+    place-items: center start;
+}
+
+.registration-form > label {
+    place-self: stretch;
+    background-color: #f4e3bb;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.registration-form > input {
+    width: 200px;
+}
+
+.err {
+    color: red;
+}
+
+
+/*______________FOOTER_______________*/
+footer {
+    display: flex;
+    min-height: 10vh;
+    color: #f5f5f5;
+    background-color: black;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+
+/*________________Flash Message________________*/
+#info {
+    position: fixed;
+    color: black;
+    background: #f4e3bb;
+    border: 1px solid #F4F1EA;
+    border-radius: 5px;
+    padding: 10px 20px;
+    left: 50%;
+    translate: -50% 0;
+    z-index: 999;
+
+    top: -100px;
+    opacity: 0;
+}
+
+#info:not(:empty) {
+    animation: fade 5s;
+}
+
+@keyframes fade {
+      0% { top: -100px; opacity: 0; }
+     10% { top:  100px; opacity: 1; }
+     90% { top:  100px; opacity: 1; }
+    100% { top: -100px; opacity: 0; }
+}
+
+
+/*________________Form________________*/
+label > * {
+    vertical-align: text-top;
+}
+
+.form {
+    display: grid;
+    grid: auto / auto auto auto;
+    gap: 5px;
+    place-content: start;
+    place-items: center start;
+    margin: 0px 30px;
+}
+
+.form > label:not(:has(*)) {
+    place-self: stretch;
+    background: #f4e3bb;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.form > section {
+    grid-column: 1 / -1;
+}
+
+.top-button {
+    margin: 15px 30px;
+}
+
+.top-form-gap {
+    margin: 25px 0px;
+}
+
+.bottom-button {
+    margin: 0px 30px 30px;
+}
